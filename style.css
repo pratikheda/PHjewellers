@@ -1,0 +1,525 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header Section */
+/* Background image is in the home section in header. */
+
+.root header {
+  width: 100%;
+  height: 100vh;
+  /* background-color: rgba(0, 0, 0, 0.938); */
+  
+}
+
+
+/* Nav-bar Section CSS */
+
+header nav {
+  height: 10%;
+  width: 100%;
+  margin-right: 20px;
+  /* background-color: aquamarine; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav .nav-bar {
+  width: 85%;
+  height: 80%;
+  /* background-color: beige; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav .nav-bar img.logo-nav-bar {
+  height: 100%;
+  width: 150px;
+}
+
+header nav .nav-bar ul.nav-bar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav .nav-bar ul.nav-bar-menu li.nav-bar-options {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 1.3rem;
+}
+
+.nav-bar ul.nav-bar-menu li.nav-bar-options a.nav-bar-links {
+  text-decoration: none;
+}
+
+/* .nav-bar ul.nav-bar-menu li.nav-bar-options a.nav-bar-links:hover {
+  background-color: rgb(62, 223, 223);
+} */
+
+
+/* Home Section CSS */
+
+header #home-section {
+  height: 90%;
+  width: 100%;
+  /* background-color: antiquewhite; */
+  background-image: url(main-header-image-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header #home-section .home-section-msg {
+  height: 40%;
+  width: 80%;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header #home-section .home-section-msg h2 {
+  font-size: 3.5rem;
+  margin: 0;
+  margin-bottom: 30px;
+  color: aquamarine;
+}
+
+header #home-section .home-section-msg span {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: rgb(87, 52, 243);
+}
+
+header #home-section .home-section-msg #start-shopping-btn {
+  height: 30px;
+  width: 120px;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: rgb(243, 159, 48);
+  border: 2px solid forestgreen;
+}
+
+header #home-section .home-section-msg #start-shopping-btn:hover {
+  transform: scale(1.1);
+  color: rgb(245, 39, 39);
+}
+
+
+/* Main Section */
+
+.root main {
+  height: 235vh;
+  width: 100%;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+/* Services Section CSS */
+
+main #services-section {
+  height: 75vh;
+  width: 100%;
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+main #services-section h2 {
+  font-size: 3rem;
+  color: rgb(21, 22, 22);
+  margin: 0;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+main #services-section .services-div-section {
+  width: 100%;
+  height: 400px;
+  /* background-color: chartreuse; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#services-section .services-div-section .services-tiles {
+  height: 350px;
+  width: 280px;
+  /* background-color: blueviolet; */
+  border-radius: 10px;
+  transition: 0.5s;
+  background: url(main-header-image-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+#services-section .services-div-section .services-tiles:hover {
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+
+#services-section .services-div-section .services-tiles .services-tiles-hover-div {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  /* background-color: aquamarine; */
+  top: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: rgba(197, 196, 196, 0.247);
+  backdrop-filter: blur(5px);
+  transition: 0.5s;
+}
+
+#services-section .services-div-section .services-tiles:hover .services-tiles-hover-div {
+  top: 40%;
+  transition: 0.5s;
+}
+
+#services-section .services-div-section .services-tiles .services-tiles-hover-div h2 {
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+  line-height: 30px;
+  font-size: 2.5rem;
+}
+
+#services-section .services-div-section .services-tiles .services-tiles-hover-div span {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 5px;
+  font-size: 1rem;
+}
+
+
+/* About Us Section CSS */
+
+main #about-us-section {
+  height: 57vh;
+  width: 100%;
+  /* background-color: aquamarine; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+main #about-us-section h2 {
+  font-size: 3rem;
+  margin: 0;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color: black;
+}
+
+main #about-us-section .about-us-section-div {
+  height: 70%;
+  width: 80%;
+  /* background-color: rgb(243, 65, 65); */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main #about-us-section .about-us-section-div .img-owner {
+  width: 250px;
+  height: 100%;
+  background: url(main-header-image-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+main #about-us-section .about-us-section-div .about-us-details {
+  width: 50%;
+  height: 100%;
+  /* background-color: rgb(197, 216, 210); */
+}
+
+#about-us-section .about-us-section-div .about-us-details h3 {
+  margin-left: 5px;
+}
+
+#about-us-section .about-us-section-div .about-us-details span {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+
+/* Contact Us Section CSS */
+
+main #contact-us-section {
+  height: 95vh;
+  width: 100%;
+  /* background-color: crimson; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+  /* background-image: url(main-header-image-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+
+main #contact-us-section h2 {
+  margin: 0;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 3rem;
+}
+
+main #contact-us-section .contact-us-form {
+  height: 80%;
+  width: 60%;
+  background-color: rgba(197, 196, 196, 0.247);
+  backdrop-filter: blur(15px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+main #contact-us-section .contact-us-form span {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.7rem;
+}
+
+main #contact-us-section .contact-us-form #name-of-enquiry-person , main #contact-us-section .contact-us-form #number-of-enquiry-person , main #contact-us-section .contact-us-form #email-id-of-enquiry-person {
+  height: 35px;
+  width: 45%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 4px;
+  border: none;
+  background: transparent;
+  outline: none;
+  border-bottom: 2px solid rgb(196, 230, 45);
+  line-height: 30px;
+  font-size: 1.3rem;
+  color: blanchedalmond;
+  caret-color: rgb(211, 233, 10);
+  /* border-radius: 10px; */
+}
+
+main #contact-us-section .contact-us-form #name-of-enquiry-person:focus , main #contact-us-section .contact-us-form #number-of-enquiry-person:focus , main #contact-us-section .contact-us-form #email-id-of-enquiry-person:focus {
+  border-bottom: 2px solid rgb(92, 90, 235);
+}
+
+main #contact-us-section .contact-us-form #name-of-enquiry-person:hover , main #contact-us-section .contact-us-form #number-of-enquiry-person:hover , main #contact-us-section .contact-us-form #email-id-of-enquiry-person:hover {
+  border-bottom: 2px solid rgb(92, 90, 235);
+}
+
+main #contact-us-section .contact-us-form #message-of-enquiry-person {
+  height: 125px;
+  width: 45%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 4px;
+  /* border: none; */
+  background: transparent;
+  outline: none;
+  border: 2px solid rgba(53, 231, 17, 0.973);
+  line-height: 30px;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  color: blanchedalmond;
+  caret-color: rgb(84, 221, 176);
+  resize: none;
+}
+
+main #contact-us-section .contact-us-form #message-of-enquiry-person:focus {
+  border: 2px solid rgb(92, 90, 235);
+}
+
+main #contact-us-section .contact-us-form #message-of-enquiry-person:hover {
+  border: 2px solid rgb(92, 90, 235);
+}
+
+/* ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ 
+  color: red;
+  opacity: 1; /* Firefox 
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 
+  color: red;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge 
+  color: red;
+} */
+
+
+main #contact-us-section .contact-us-form .form-submit-btn {
+  height: 30px;
+  width: 70px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: aquamarine;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 0;
+  transition: 0.5s;
+}
+
+main #contact-us-section .contact-us-form .form-submit-btn:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+
+/* Footer Section */
+
+.root footer {
+  height: 14vh;
+  width: 100%;
+  background-color: rgb(8, 8, 8);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer .footer-nav {
+  height: 50%;
+  width: 80%;
+  /* background-color: rgb(185, 255, 127); */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer .footer-nav .footer-nav-sections {
+  height: 100%;
+  width: 20%;
+  /* background-color: rgb(245, 140, 11); */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+footer .footer-nav #change-for-email {
+  width: 30%;
+}
+
+footer .footer-nav .footer-nav-sections ul.footer-nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav-sections ul.footer-nav-menu li.footer-nav-menu-option {
+  margin-top: 5px;
+  color: rgb(202, 226, 226);
+}
+
+.footer-nav-sections ul.footer-nav-menu a.footer-nav-menu-links {
+  text-decoration: none;
+  color: rgb(225, 235, 235);
+}
+
+footer span.footer-span-copyright {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: aliceblue;
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+  nav .nav-bar ul.nav-bar-menu li.nav-bar-options {
+    margin: 0 8px;
+  }
+
+  main #services-section {
+    height: 65vh;
+  }
+
+  main #services-section .services-div-section {
+  /* width: 100%; */
+  height: 350px;
+  }
+
+  #services-section .services-div-section .services-tiles {
+    height: 300px;
+    width: 240px;
+  }
+
+  #services-section .services-div-section .services-tiles:hover .services-tiles-hover-div {
+    top: 30%;
+  }
+
+  #services-section .services-div-section .services-tiles .services-tiles-hover-div h2 {
+    font-size: 2rem;
+  }
+
+  main #contact-us-section .contact-us-form {
+    height: 80%;
+    width: 80%;
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  header nav .nav-bar ul.nav-bar-menu {
+    display: none;
+  }
+
+  header #home-section .home-section-msg {
+    width: 90%;
+  }
+
+  header #home-section .home-section-msg h2 {
+    font-size: 2.5rem;
+  }
+}
+
+
+
+@media screen and (max-width: 486px) {
+
+}
+
+
+
+@media screen and (max-width: 281px) {
+
+}
