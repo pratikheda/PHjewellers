@@ -10,15 +10,12 @@ html {
   scroll-behavior: smooth;
 }
 
-.root {
-  height: max-content;
-}
-
 /* Header Section */
 /* Background image is in the home section in header. */
 
 .root header {
   height: 100vh;
+  /* max-height: 768px; */
 }
 
 
@@ -26,15 +23,17 @@ html {
 
 header nav {
   height: 10%;
-  margin-right: 20px;
+  min-height: 60px;
+  max-height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: aquamarine;
 }
 
 header nav .nav-bar {
-  width: 85%;
-  height: 80%;
+  width: 90%;
+  height: 85%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,7 +41,7 @@ header nav .nav-bar {
 
 header nav .nav-bar img.logo-nav-bar {
   height: 100%;
-  width: 150px;
+  width: 160px;
 }
 
 header nav .nav-bar ul.nav-bar-menu {
@@ -53,17 +52,25 @@ header nav .nav-bar ul.nav-bar-menu {
 
 nav .nav-bar ul.nav-bar-menu li.nav-bar-options {
   display: inline-block;
-  margin: 0 10px;
+  padding: 0 8px;
+  margin: 0 3px;
+  line-height: 30px;
   font-size: 1.3rem;
+  /* background-color: aqua; */
+}
+
+nav .nav-bar ul.nav-bar-menu li.nav-bar-options:hover {
+  background-color: rgba(241, 171, 78, 0.733);
+  border-radius: 10px;
 }
 
 .nav-bar ul.nav-bar-menu li.nav-bar-options a.nav-bar-links {
   text-decoration: none;
 }
 
-/* .nav-bar ul.nav-bar-menu li.nav-bar-options a.nav-bar-links:hover {
-  background-color: rgb(62, 223, 223);
-} */
+.nav-bar ul.nav-bar-menu li.nav-bar-options a.nav-bar-links:focus {
+  color: rgb(0, 0, 0);
+}
 
 
 /* Home Section CSS */
@@ -79,7 +86,7 @@ header #home-section {
 }
 
 header #home-section .home-section-msg {
-  height: 40%;
+  height: max-content;
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -97,22 +104,24 @@ header #home-section .home-section-msg h2 {
 header #home-section .home-section-msg span {
   font-size: 2rem;
   margin-bottom: 20px;
+  font-weight: 700;
   color: rgb(87, 52, 243);
 }
 
 header #home-section .home-section-msg #start-shopping-btn {
-  height: 30px;
-  width: 120px;
+  height: 35px;
+  width: 130px;
   background: transparent;
   cursor: pointer;
   border-radius: 10px;
   background-color: rgb(243, 159, 48);
-  border: 2px solid forestgreen;
+  color: aquamarine;
+  border: 0;
 }
 
 header #home-section .home-section-msg #start-shopping-btn:hover {
   transform: scale(1.1);
-  color: rgb(245, 39, 39);
+  color: rgb(83, 32, 223);
 }
 
 
@@ -156,7 +165,7 @@ main #services-section .services-div-section {
 }
 
 #services-section .services-div-section .services-tiles {
-  height: 350px;
+  height: 330px;
   width: 280px;
   border-radius: 10px;
   transition: 0.5s;
@@ -182,6 +191,7 @@ main #services-section .services-div-section {
   background-color: rgba(197, 196, 196, 0.247);
   backdrop-filter: blur(5px);
   transition: 0.5s;
+  padding: 10px;
 }
 
 #services-section .services-div-section .services-tiles:hover .services-tiles-hover-div {
@@ -190,20 +200,14 @@ main #services-section .services-div-section {
 }
 
 #services-section .services-div-section .services-tiles .services-tiles-hover-div h2 {
-  margin: 0;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 5px;
+  margin: 20px 0;
   line-height: 30px;
   font-size: 2.5rem;
 }
 
 #services-section .services-div-section .services-tiles .services-tiles-hover-div span {
-  margin-top: 15px;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  margin-right: 5px;
-  font-size: 1rem;
+  margin: 10px 0;
+  font-size: 1.2rem;
 }
 
 
@@ -215,12 +219,13 @@ main #about-us-section {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 main #about-us-section h2 {
   font-size: 3rem;
-  margin: 40px 0;
+  margin-top: 20px;
+  margin-bottom: 28px;
   color: black;
 }
 
@@ -233,29 +238,31 @@ main #about-us-section .about-us-section-div {
   align-items: center;
 }
 
-main #about-us-section .about-us-section-div .img-owner {
+main #about-us-section .about-us-section-div img {
   width: 250px;
   height: 250px;
-  background: url(main-header-image-background.jpg);
+  /* background: url(main-header-image-background.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 10px;
+  background-size: cover; */
+  border-radius: 15px;
 }
 
 main #about-us-section .about-us-section-div .about-us-details {
   width: 50%;
-  height: 100%;
+  height: max-content;
+  padding: 5px;
 }
 
 #about-us-section .about-us-section-div .about-us-details h3 {
-  margin-left: 5px;
+  /* margin-left: 5px; */
+  margin: 15px 0;
 }
 
 #about-us-section .about-us-section-div .about-us-details span {
   display: inline-block;
-  margin-left: 5px;
-  font-size: 1rem;
-  margin-bottom: 20px;
+  /* margin-left: 5px; */
+  font-size: 1.1rem;
+  margin-bottom: 10px;
 }
 
 
@@ -275,7 +282,8 @@ main #contact-us-section {
 }
 
 main #contact-us-section h2 {
-  margin: 40px 0;
+  margin-bottom: 40px;
+  margin-top: 10px;
   font-size: 3rem;
 }
 
@@ -299,7 +307,7 @@ main #contact-us-section .contact-us-form span {
 
 main #contact-us-section .contact-us-form #name-of-enquiry-person , main #contact-us-section .contact-us-form #number-of-enquiry-person , main #contact-us-section .contact-us-form #email-id-of-enquiry-person {
   height: 35px;
-  width: 45%;
+  width: 50%;
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 4px;
@@ -390,6 +398,7 @@ main #contact-us-section .contact-us-form .form-submit-btn:hover {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  padding: 7px;
 }
 
 footer .footer-nav {
@@ -400,33 +409,21 @@ footer .footer-nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  text-align: center;
 }
 
-footer .footer-nav .footer-nav-sections {
-  height: 100%;
-  width: 20%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-footer .footer-nav #change-for-email {
-  width: 30%;
-}
-
-footer .footer-nav .footer-nav-sections ul.footer-nav-menu {
+footer .footer-nav  ul.footer-nav-menu {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.footer-nav-sections ul.footer-nav-menu li.footer-nav-menu-option {
-  margin-top: 5px;
+ ul.footer-nav-menu li.footer-nav-menu-option {
+  margin-top: 7px;
   color: rgb(202, 226, 226);
 }
 
-.footer-nav-sections ul.footer-nav-menu a.footer-nav-menu-links {
+ ul.footer-nav-menu a.footer-nav-menu-links {
   text-decoration: none;
   color: rgb(225, 235, 235);
 }
@@ -435,6 +432,7 @@ footer span.footer-span-copyright {
   margin-top: 10px;
   margin-bottom: 20px;
   color: aliceblue;
+  text-align: center;
 }
 
 
@@ -442,17 +440,9 @@ footer span.footer-span-copyright {
 
 @media screen and (max-width: 1024px) {
   nav .nav-bar ul.nav-bar-menu li.nav-bar-options {
-    margin: 0 8px;
+    /* margin: 0 8px; */
   }
 
-  main #services-section {
-    height: max-content;
-  }
-
-  main #services-section .services-div-section {
-  /* width: 100%; */
-  height: max-content;
-  }
 
   #services-section .services-div-section .services-tiles {
     height: 300px;
@@ -467,9 +457,12 @@ footer span.footer-span-copyright {
     font-size: 2rem;
   }
 
-  main #contact-us-section .contact-us-form {
-    height: max-content;
+  /* main #contact-us-section .contact-us-form {
     width: 80%;
+  } */
+
+  main #contact-us-section .contact-us-form #name-of-enquiry-person , main #contact-us-section .contact-us-form #number-of-enquiry-person , main #contact-us-section .contact-us-form #email-id-of-enquiry-person , main #contact-us-section .contact-us-form #message-of-enquiry-person {
+    width: 60%;
   }
 }
 
@@ -485,39 +478,109 @@ footer span.footer-span-copyright {
   }
 
   header #home-section .home-section-msg h2 {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
+  }
+
+  header #home-section .home-section-msg span {
+    font-size: 1.7rem;
+  }
+
+
+
+  main #services-section {
+    margin-bottom: 0;
+  }
+  main #services-section .services-div-section {
+    flex-direction: column;
+  }
+
+  #services-section .services-div-section .services-tiles {
+    width: 300px;
+    margin-bottom: 25px;
+  }
+
+
+
+  main #about-us-section .about-us-section-div {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  main #about-us-section .about-us-section-div img {
+    width: 280px;
+    height: 280px;
+  }
+
+  main #about-us-section .about-us-section-div .about-us-details {
+    width: 80%;
+    padding: 10px;
+  }
+
+
+  main #contact-us-section .contact-us-form {
+    width: 80%;
   }
 }
 
 
 
 @media screen and (max-width: 486px) {
-  main #services-section .services-div-section {
+  /* main #services-section .services-div-section {
     flex-wrap: wrap;
-  }
+  } */
+
+  /* #services-section .services-div-section .services-tiles {
+    margin: 20px 0;
+  } */
+
+
+  /* main #about-us-section .about-us-section-div {
+    flex-wrap: wrap;
+  } */
+
 
   #services-section .services-div-section .services-tiles {
-    margin: 20px 0;
+    height: 300px;
+    width: 250px;
   }
 
 
-  main #about-us-section .about-us-section-div {
-    flex-wrap: wrap;
+
+  main #about-us-section .about-us-section-div img {
+    width: 220px;
+    height: 220px;
   }
 
   main #about-us-section .about-us-section-div .about-us-details {
-    width: 100%;
+    width: 90%;
+  }
+
+  #about-us-section .about-us-section-div .about-us-details span {
+    font-size: 1rem;
   }
 
 
 
   main #contact-us-section .contact-us-form #name-of-enquiry-person , main #contact-us-section .contact-us-form #number-of-enquiry-person , main #contact-us-section .contact-us-form #email-id-of-enquiry-person , main #contact-us-section .contact-us-form #message-of-enquiry-person {
-    width: 90%;
+    width: 80%;
   }
+
+  
+
+  footer .footer-nav {
+    flex-direction: column;
+  }
+
+  footer .footer-nav  {
+    width: 80%;
+  }
+
 }
 
 
 
-@media screen and (max-width: 281px) {
-
+@media screen and (max-width: 279px) {
+  * {
+    display: none;
+  }
 }
