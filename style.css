@@ -439,11 +439,6 @@ footer span.footer-span-copyright {
 
 
 @media screen and (max-width: 1024px) {
-  nav .nav-bar ul.nav-bar-menu li.nav-bar-options {
-    /* margin: 0 8px; */
-  }
-
-
   #services-section .services-div-section .services-tiles {
     height: 300px;
     width: 240px;
