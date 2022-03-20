@@ -10,14 +10,15 @@ html {
   scroll-behavior: smooth;
 }
 
+.root {
+  height: max-content;
+}
+
 /* Header Section */
 /* Background image is in the home section in header. */
 
 .root header {
-  width: 100%;
   height: 100vh;
-  /* background-color: rgba(0, 0, 0, 0.938); */
-  
 }
 
 
@@ -25,9 +26,7 @@ html {
 
 header nav {
   height: 10%;
-  width: 100%;
   margin-right: 20px;
-  /* background-color: aquamarine; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,7 +35,6 @@ header nav {
 header nav .nav-bar {
   width: 85%;
   height: 80%;
-  /* background-color: beige; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -72,8 +70,6 @@ nav .nav-bar ul.nav-bar-menu li.nav-bar-options {
 
 header #home-section {
   height: 90%;
-  width: 100%;
-  /* background-color: antiquewhite; */
   background-image: url(main-header-image-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -85,7 +81,6 @@ header #home-section {
 header #home-section .home-section-msg {
   height: 40%;
   width: 80%;
-  /* background-color: aqua; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -124,9 +119,7 @@ header #home-section .home-section-msg #start-shopping-btn:hover {
 /* Main Section */
 
 .root main {
-  height: 235vh;
-  width: 100%;
-  background-color: aliceblue;
+  height: max-content;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -137,9 +130,8 @@ header #home-section .home-section-msg #start-shopping-btn:hover {
 /* Services Section CSS */
 
 main #services-section {
-  height: 75vh;
+  height: max-content;
   width: 100%;
-  /* background-color: blue; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -150,27 +142,22 @@ main #services-section {
 main #services-section h2 {
   font-size: 3rem;
   color: rgb(21, 22, 22);
-  margin: 0;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin: 40px 0;
 }
 
 main #services-section .services-div-section {
   width: 100%;
-  height: 400px;
-  /* background-color: chartreuse; */
+  height: max-content;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-evenly;
   align-items: center;
-  margin-bottom: 10px;
 }
 
 #services-section .services-div-section .services-tiles {
   height: 350px;
   width: 280px;
-  /* background-color: blueviolet; */
   border-radius: 10px;
   transition: 0.5s;
   background: url(main-header-image-background.jpg);
@@ -188,7 +175,6 @@ main #services-section .services-div-section {
   height: 100%;
   width: 100%;
   position: relative;
-  /* background-color: aquamarine; */
   top: 100%;
   display: flex;
   flex-direction: column;
@@ -224,9 +210,7 @@ main #services-section .services-div-section {
 /* About Us Section CSS */
 
 main #about-us-section {
-  height: 57vh;
-  width: 100%;
-  /* background-color: aquamarine; */
+  height: max-content;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -236,16 +220,13 @@ main #about-us-section {
 
 main #about-us-section h2 {
   font-size: 3rem;
-  margin: 0;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin: 40px 0;
   color: black;
 }
 
 main #about-us-section .about-us-section-div {
-  height: 70%;
+  height: max-content;
   width: 80%;
-  /* background-color: rgb(243, 65, 65); */
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -254,7 +235,7 @@ main #about-us-section .about-us-section-div {
 
 main #about-us-section .about-us-section-div .img-owner {
   width: 250px;
-  height: 100%;
+  height: 250px;
   background: url(main-header-image-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -264,7 +245,6 @@ main #about-us-section .about-us-section-div .img-owner {
 main #about-us-section .about-us-section-div .about-us-details {
   width: 50%;
   height: 100%;
-  /* background-color: rgb(197, 216, 210); */
 }
 
 #about-us-section .about-us-section-div .about-us-details h3 {
@@ -282,9 +262,8 @@ main #about-us-section .about-us-section-div .about-us-details {
 /* Contact Us Section CSS */
 
 main #contact-us-section {
-  height: 95vh;
+  height: max-content;
   width: 100%;
-  /* background-color: crimson; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -296,14 +275,12 @@ main #contact-us-section {
 }
 
 main #contact-us-section h2 {
-  margin: 0;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin: 40px 0;
   font-size: 3rem;
 }
 
 main #contact-us-section .contact-us-form {
-  height: 80%;
+  height: max-content;
   width: 60%;
   background-color: rgba(197, 196, 196, 0.247);
   backdrop-filter: blur(15px);
@@ -311,6 +288,7 @@ main #contact-us-section .contact-us-form {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 main #contact-us-section .contact-us-form span {
@@ -350,7 +328,6 @@ main #contact-us-section .contact-us-form #message-of-enquiry-person {
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 4px;
-  /* border: none; */
   background: transparent;
   outline: none;
   border: 2px solid rgba(53, 231, 17, 0.973);
@@ -385,7 +362,7 @@ main #contact-us-section .contact-us-form #message-of-enquiry-person:hover {
 
 
 main #contact-us-section .contact-us-form .form-submit-btn {
-  height: 30px;
+  height: 35px;
   width: 70px;
   margin-top: 20px;
   margin-bottom: 10px;
@@ -406,7 +383,7 @@ main #contact-us-section .contact-us-form .form-submit-btn:hover {
 /* Footer Section */
 
 .root footer {
-  height: 14vh;
+  height: max-content;
   width: 100%;
   background-color: rgb(8, 8, 8);
   display: flex;
@@ -416,9 +393,10 @@ main #contact-us-section .contact-us-form .form-submit-btn:hover {
 }
 
 footer .footer-nav {
+  margin-top: 50px;
+  margin-bottom: 30px;
   height: 50%;
   width: 80%;
-  /* background-color: rgb(185, 255, 127); */
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -427,7 +405,6 @@ footer .footer-nav {
 footer .footer-nav .footer-nav-sections {
   height: 100%;
   width: 20%;
-  /* background-color: rgb(245, 140, 11); */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -469,12 +446,12 @@ footer span.footer-span-copyright {
   }
 
   main #services-section {
-    height: 65vh;
+    height: max-content;
   }
 
   main #services-section .services-div-section {
   /* width: 100%; */
-  height: 350px;
+  height: max-content;
   }
 
   #services-section .services-div-section .services-tiles {
@@ -491,7 +468,7 @@ footer span.footer-span-copyright {
   }
 
   main #contact-us-section .contact-us-form {
-    height: 80%;
+    height: max-content;
     width: 80%;
   }
 }
@@ -515,7 +492,28 @@ footer span.footer-span-copyright {
 
 
 @media screen and (max-width: 486px) {
+  main #services-section .services-div-section {
+    flex-wrap: wrap;
+  }
 
+  #services-section .services-div-section .services-tiles {
+    margin: 20px 0;
+  }
+
+
+  main #about-us-section .about-us-section-div {
+    flex-wrap: wrap;
+  }
+
+  main #about-us-section .about-us-section-div .about-us-details {
+    width: 100%;
+  }
+
+
+
+  main #contact-us-section .contact-us-form #name-of-enquiry-person , main #contact-us-section .contact-us-form #number-of-enquiry-person , main #contact-us-section .contact-us-form #email-id-of-enquiry-person , main #contact-us-section .contact-us-form #message-of-enquiry-person {
+    width: 90%;
+  }
 }
 
 
