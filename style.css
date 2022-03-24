@@ -437,6 +437,21 @@ footer span.footer-span-copyright {
 
 
 
+/* Media Query for Header */
+
+@media only screen and (max-width: 768px) , screen and (min-height: 924px) {
+  .root header {
+    height: 45vh;
+  }
+}
+
+/* Media Query for Header */
+
+@media only screen and (max-height: 768px) and (orientation: landscape) {
+  .root header {
+    height: 100vh;
+  }
+}
 
 @media screen and (max-width: 1024px) {
   #services-section .services-div-section .services-tiles {
