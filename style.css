@@ -2,6 +2,16 @@
   box-sizing: border-box;
 }
 
+:root {
+  --font-color-input: rgb(139, 175, 230);
+  --border-color-input: rgb(247, 151, 188);
+  --caret-color-input: rgb(63, 65, 43);
+  --border-color-text: rgb(65, 55, 55);
+  --border-color-msg: rgb(49, 68, 70);
+  --form-bg-color: rgba(197, 196, 196, 0.247);
+  --gradient-text-color-1: linear-gradient(153deg, rgba(209,217,62,0.8186624991793592) 0%, rgba(248,104,61,1) 59%, rgba(123,0,255,0.9363095580028886) 100%);
+}
+
 body {
   margin: 0;
 }
@@ -24,7 +34,6 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: aquamarine;
 }
 
 nav .nav-bar {
@@ -81,12 +90,12 @@ nav .nav-bar ul.nav-bar-menu li.nav-bar-options:hover {
 
 .root header {
   height: 90vh;
-  max-height: calc(100vh - 60px);
-  /* max-height: 768px; */
+  /* max-height: calc(100vh - 60px); */
 }
 
 header #home-section {
   height: 100%;
+  max-height: fit-content;
   background-image: url(main-header-image-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -160,7 +169,10 @@ main #services-section {
 
 main #services-section h2 {
   font-size: 3rem;
-  color: rgb(21, 22, 22);
+  background: var(--gradient-text-color-1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin: 40px 0;
 }
 
@@ -179,10 +191,22 @@ main #services-section .services-div-section {
   width: 280px;
   border-radius: 10px;
   /* transition: 0.5s; */
-  background: url(main-header-image-background.jpg);
+  /* background: url(main-header-image-background.jpg); */
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+}
+
+#services-section .services-div-section .service-div-1 {
+  background: url(Platinum-Jewellery-Ornament.png);
+}
+
+#services-section .services-div-section .service-div-2 {
+  background: url(Gold-Jewellery-Ornament.jpg);
+}
+
+#services-section .services-div-section .service-div-3 {
+  background: url(Silver-Jewellery-Ornament.jpg);
 }
 
 #services-section .services-div-section .services-tiles:hover {
@@ -236,7 +260,10 @@ main #about-us-section h2 {
   font-size: 3rem;
   margin-top: 20px;
   margin-bottom: 28px;
-  color: black;
+  background: var(--gradient-text-color-1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 main #about-us-section .about-us-section-div {
@@ -249,7 +276,7 @@ main #about-us-section .about-us-section-div {
 }
 
 main #about-us-section .about-us-section-div img {
-  width: 250px;
+  width: 200px;
   height: 250px;
   /* background: url(main-header-image-background.jpg);
   background-repeat: no-repeat;
@@ -295,12 +322,16 @@ main #contact-us-section h2 {
   margin-bottom: 40px;
   margin-top: 10px;
   font-size: 3rem;
+  background: var(--gradient-text-color-1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 main #contact-us-section .contact-us-form {
   height: max-content;
   width: 60%;
-  background-color: rgba(197, 196, 196, 0.247);
+  background-color: var(--form-bg-color);
   backdrop-filter: blur(15px);
   display: flex;
   flex-direction: column;
@@ -324,20 +355,20 @@ main #contact-us-section .contact-us-form #name-of-enquiry-person , main #contac
   border: none;
   background: transparent;
   outline: none;
-  border-bottom: 2px solid rgb(196, 230, 45);
+  border-bottom: 2px solid var(--border-color-text);
   line-height: 30px;
   font-size: 1.3rem;
-  color: blanchedalmond;
-  caret-color: rgb(211, 233, 10);
+  color: var(--font-color-input);
+  caret-color: var(--caret-color-input);
   /* border-radius: 10px; */
 }
 
 main #contact-us-section .contact-us-form #name-of-enquiry-person:focus , main #contact-us-section .contact-us-form #number-of-enquiry-person:focus , main #contact-us-section .contact-us-form #email-id-of-enquiry-person:focus {
-  border-bottom: 2px solid rgb(92, 90, 235);
+  border-bottom: 2px solid var(--border-color-input);
 }
 
 main #contact-us-section .contact-us-form #name-of-enquiry-person:hover , main #contact-us-section .contact-us-form #number-of-enquiry-person:hover , main #contact-us-section .contact-us-form #email-id-of-enquiry-person:hover {
-  border-bottom: 2px solid rgb(92, 90, 235);
+  border-bottom: 2px solid var(--border-color-input);
 }
 
 main #contact-us-section .contact-us-form #message-of-enquiry-person {
@@ -348,21 +379,21 @@ main #contact-us-section .contact-us-form #message-of-enquiry-person {
   padding: 4px;
   background: transparent;
   outline: none;
-  border: 2px solid rgba(53, 231, 17, 0.973);
+  border: 2px solid var(--border-color-msg);
   line-height: 30px;
   font-size: 1.3rem;
   border-radius: 10px;
-  color: blanchedalmond;
-  caret-color: rgb(84, 221, 176);
+  color: var(--font-color-input);
+  caret-color: var(--caret-color-input);
   resize: none;
 }
 
 main #contact-us-section .contact-us-form #message-of-enquiry-person:focus {
-  border: 2px solid rgb(92, 90, 235);
+  border: 2px solid var(--border-color-input);
 }
 
 main #contact-us-section .contact-us-form #message-of-enquiry-person:hover {
-  border: 2px solid rgb(92, 90, 235);
+  border: 2px solid var(--border-color-input);
 }
 
 /* ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ 
@@ -451,7 +482,9 @@ footer span.footer-span-copyright {
 
 @media only screen and (max-width: 768px) , screen and (min-height: 924px) {
   .root header {
-    height: 40vh;
+    height: 35vh;
+    min-height: 250px;
+    /* min-height: max-content; */
   }
 }
 
@@ -498,6 +531,10 @@ footer span.footer-span-copyright {
 
 
 @media screen and (max-width: 768px) {
+  .root nav {
+    min-height: 60px;
+  }
+  
   nav .nav-bar button.hamburger-nav-menu {
     display: initial;
   }
@@ -540,8 +577,8 @@ footer span.footer-span-copyright {
   }
 
   main #about-us-section .about-us-section-div img {
-    width: 280px;
-    height: 280px;
+    width: 250px;
+    height: 300px;
   }
 
   main #about-us-section .about-us-section-div .about-us-details {
@@ -580,8 +617,8 @@ footer span.footer-span-copyright {
 
 
   main #about-us-section .about-us-section-div img {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 250px;
   }
 
   main #about-us-section .about-us-section-div .about-us-details {
