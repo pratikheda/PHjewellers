@@ -19,15 +19,12 @@ html {
 
 .root nav {
   height: 10vh;
-  width: 100%;
-  position: fixed;
   min-height: 60px;
   max-height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: aquamarine;
-  z-index: 999;
 }
 
 nav .nav-bar {
