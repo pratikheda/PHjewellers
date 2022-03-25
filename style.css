@@ -14,15 +14,15 @@ html {
 /* Background image is in the home section in header. */
 
 .root header {
-  height: 100vh;
+  height: 90vh;
   /* max-height: 768px; */
 }
 
 
 /* Nav-bar Section CSS */
 
-header nav {
-  height: 10%;
+.root nav {
+  height: 10vh;
   min-height: 60px;
   max-height: 100px;
   display: flex;
@@ -31,7 +31,7 @@ header nav {
   background-color: aquamarine;
 }
 
-header nav .nav-bar {
+nav .nav-bar {
   width: 90%;
   height: 85%;
   display: flex;
@@ -39,12 +39,19 @@ header nav .nav-bar {
   align-items: center;
 }
 
-header nav .nav-bar img.logo-nav-bar {
+nav .nav-bar img.logo-nav-bar {
   height: 100%;
   width: 160px;
 }
 
-header nav .nav-bar ul.nav-bar-menu {
+nav .nav-bar button.hamburger-nav-menu {
+  background: transparent;
+  border: 0;
+  font-size: 30px;
+  display: none;
+}
+
+nav .nav-bar ul.nav-bar-menu {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -76,7 +83,7 @@ nav .nav-bar ul.nav-bar-menu li.nav-bar-options:hover {
 /* Home Section CSS */
 
 header #home-section {
-  height: 90%;
+  height: 100%;
   background-image: url(main-header-image-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -451,6 +458,15 @@ footer span.footer-span-copyright {
   .root header {
     height: 100vh;
   }
+
+  /* For Menu in Tablet and Mobile */
+  nav .nav-bar button.hamburger-nav-menu {
+    display: initial;
+  }
+
+  nav .nav-bar ul.nav-bar-menu {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -479,7 +495,11 @@ footer span.footer-span-copyright {
 
 
 @media screen and (max-width: 768px) {
-  header nav .nav-bar ul.nav-bar-menu {
+  nav .nav-bar button.hamburger-nav-menu {
+    display: initial;
+  }
+
+  nav .nav-bar ul.nav-bar-menu {
     display: none;
   }
 
