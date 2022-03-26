@@ -3,15 +3,19 @@
 }
 
 :root {
-  --font-color-input: rgb(139, 175, 230);
-  --main-color-theme: rgb(243, 170, 170);
-  --caret-color-input: rgb(63, 65, 43);
-  --border-color-text: rgb(65, 55, 55);
-  --border-color-msg: rgb(49, 68, 70);
+  --main-theme-pink: rgb(243, 170, 170);
+  --main-theme-gray: gray;
+  --main-theme-3: rgb(145, 86, 241);
+  /* --main-theme-pink: rgb(139, 175, 230); */
+  /* --main-theme-gray: rgb(63, 65, 43); */
+  /* --border-color-text: rgb(65, 55, 55); */
+  /* --border-color-msg: rgb(49, 68, 70); */
   --form-bg-color: rgba(197, 196, 196, 0.247);
   --gradient-text-color-1: linear-gradient(153deg, rgba(209,217,62,0.8186624991793592) 0%, rgba(248,104,61,1) 59%, rgba(123,0,255,0.9363095580028886) 100%);
-  --gray-color: grayscale(5);
-  --gray-color-undo: grayscale(0);
+  --gradient-text-color-2: green;
+  --gradient-text-color-3: linear-gradient(0deg, rgba(243,170,170,0.9895308465182948) 55%, rgba(128,128,128,1) 100%);;
+  /* --gray-color-icon: grayscale(5); */
+  /* --gray-color-icon-undo: grayscale(0); */
 }
 
 body {
@@ -36,6 +40,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--main-theme-pink);
 }
 
 nav .nav-bar {
@@ -68,22 +73,26 @@ nav .nav-bar ul.nav-bar-menu li.nav-bar-options {
   display: inline-block;
   padding: 0 8px;
   margin: 0 3px;
-  line-height: 30px;
+  line-height: 33px;
   font-size: 1.3rem;
-  /* background-color: aqua; */
 }
 
 nav .nav-bar ul.nav-bar-menu li.nav-bar-options:hover {
-  background-color: rgba(241, 171, 78, 0.733);
+  background-color: var(--main-theme-gray);
   border-radius: 10px;
+}
+
+.nav-bar ul.nav-bar-menu li.nav-bar-options:hover a.nav-bar-links {
+  color: var(--main-theme-pink);
 }
 
 .nav-bar ul.nav-bar-menu li.nav-bar-options a.nav-bar-links {
   text-decoration: none;
+  color: var(--main-theme-gray);
 }
 
 .nav-bar ul.nav-bar-menu li.nav-bar-options a.nav-bar-links:focus {
-  color: rgb(0, 0, 0);
+  color: var(--main-theme-3);
 }
 
 
@@ -123,29 +132,34 @@ header #home-section .home-section-msg h2 {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: center;
 }
 
 header #home-section .home-section-msg span {
   font-size: 2rem;
   margin-bottom: 20px;
   font-weight: 700;
-  color: rgb(87, 52, 243);
+  color: var(--main-theme-3);
+  background: var(--form-bg-color);
+  border-radius: 10px;
+  text-align: center;
 }
 
 header #home-section .home-section-msg #start-shopping-btn {
-  height: 35px;
+  height: 33px;
   width: 130px;
   background: transparent;
   cursor: pointer;
   border-radius: 10px;
-  background-color: rgb(243, 159, 48);
-  color: aquamarine;
+  background-color: var(--main-theme-pink);
+  color: var(--main-theme-gray);
   border: 0;
+  font-size: 1rem;
 }
 
 header #home-section .home-section-msg #start-shopping-btn:hover {
   transform: scale(1.1);
-  color: rgb(83, 32, 223);
+  color: var(--main-theme-3);
 }
 
 
@@ -172,7 +186,7 @@ main #services-section {
   margin-bottom: 20px;
 }
 
-main #services-section h2 {
+main #services-section h2.service-title {
   font-size: 3rem;
   background: var(--gradient-text-color-1);
   background-clip: text;
@@ -200,6 +214,7 @@ main #services-section .services-div-section {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+  box-shadow: 10px;
 }
 
 #services-section .services-div-section .service-div-1 {
@@ -227,8 +242,9 @@ main #services-section .services-div-section {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: rgba(197, 196, 196, 0.247);
-  backdrop-filter: blur(5px);
+  /* background-color: var(--form-bg-color); */
+  background-color: var(--gradient-text-color-3);
+  backdrop-filter: blur(10px);
   transition: 0.5s;
   padding: 10px;
 }
@@ -242,11 +258,13 @@ main #services-section .services-div-section {
   margin: 20px 0;
   line-height: 30px;
   font-size: 2.5rem;
+  color: var(--gradient-text-color-2);
 }
 
 #services-section .services-div-section .services-tiles .services-tiles-hover-div span {
   margin: 10px 0;
   font-size: 1.2rem;
+  color: var(--main-theme-3);
 }
 
 
@@ -298,6 +316,8 @@ main #about-us-section .about-us-section-div .about-us-details {
 #about-us-section .about-us-section-div .about-us-details h3 {
   /* margin-left: 5px; */
   margin: 15px 0;
+  color: var(--gradient-text-color-2);
+  text-align: center;
 }
 
 #about-us-section .about-us-section-div .about-us-details span {
@@ -305,6 +325,7 @@ main #about-us-section .about-us-section-div .about-us-details {
   /* margin-left: 5px; */
   font-size: 1.1rem;
   margin-bottom: 10px;
+  color: var(--main-theme-3);
 }
 
 
@@ -333,7 +354,7 @@ main #contact-us-section h2 {
   -webkit-text-fill-color: transparent;
 }
 
-main #contact-us-section .contact-us-form {
+main #contact-us-section form {
   height: max-content;
   width: 60%;
   background-color: var(--form-bg-color);
@@ -343,15 +364,17 @@ main #contact-us-section .contact-us-form {
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 20px;
+  border-radius: 10px;
 }
 
-main #contact-us-section .contact-us-form span {
+main #contact-us-section form span {
   margin-top: 20px;
   margin-bottom: 10px;
   font-size: 1.7rem;
+  color: var(--main-theme-3);
 }
 
-main #contact-us-section .contact-us-form #name-of-enquiry-person , main #contact-us-section .contact-us-form #number-of-enquiry-person , main #contact-us-section .contact-us-form #email-id-of-enquiry-person {
+main #contact-us-section form #name-of-enquiry-person , main #contact-us-section form #number-of-enquiry-person , main #contact-us-section form #email-id-of-enquiry-person {
   height: 35px;
   width: 50%;
   margin-top: 5px;
@@ -360,45 +383,45 @@ main #contact-us-section .contact-us-form #name-of-enquiry-person , main #contac
   border: none;
   background: transparent;
   outline: none;
-  border-bottom: 2px solid var(--border-color-text);
+  border-bottom: 2px solid var(--main-theme-pink);
   line-height: 30px;
   font-size: 1.3rem;
-  color: var(--font-color-input);
-  caret-color: var(--caret-color-input);
+  color: var(--main-theme-gray);
+  caret-color: var(--main-theme-pink);
   /* border-radius: 10px; */
 }
 
-main #contact-us-section .contact-us-form #name-of-enquiry-person:focus , main #contact-us-section .contact-us-form #number-of-enquiry-person:focus , main #contact-us-section .contact-us-form #email-id-of-enquiry-person:focus {
-  border-bottom: 2px solid var(--main-color-theme);
+main #contact-us-section form #name-of-enquiry-person:focus , main #contact-us-section form #number-of-enquiry-person:focus , main #contact-us-section form #email-id-of-enquiry-person:focus {
+  border-bottom: 2px solid var(--main-theme-3);
 }
 
-main #contact-us-section .contact-us-form #name-of-enquiry-person:hover , main #contact-us-section .contact-us-form #number-of-enquiry-person:hover , main #contact-us-section .contact-us-form #email-id-of-enquiry-person:hover {
-  border-bottom: 2px solid var(--main-color-theme);
+main #contact-us-section form #name-of-enquiry-person:hover , main #contact-us-section form #number-of-enquiry-person:hover , main #contact-us-section form #email-id-of-enquiry-person:hover {
+  border-bottom: 2px solid var(--main-theme-3);
 }
 
-main #contact-us-section .contact-us-form #message-of-enquiry-person {
+main #contact-us-section form #message-of-enquiry-person {
   height: 145px;
-  width: 55%;
+  width: 50%;
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 4px;
   background: transparent;
   outline: none;
-  border: 2px solid var(--border-color-msg);
+  border: 2px solid var(--main-theme-pink);
   line-height: 30px;
   font-size: 1.3rem;
   border-radius: 10px;
-  color: var(--font-color-input);
-  caret-color: var(--caret-color-input);
+  color: var(--main-theme-gray);
+  caret-color: var(--main-theme-pink);
   resize: none;
 }
 
-main #contact-us-section .contact-us-form #message-of-enquiry-person:focus {
-  border: 2px solid var(--main-color-theme);
+main #contact-us-section form #message-of-enquiry-person:focus {
+  border: 2px solid var(--main-theme-3);
 }
 
-main #contact-us-section .contact-us-form #message-of-enquiry-person:hover {
-  border: 2px solid var(--main-color-theme);
+main #contact-us-section form #message-of-enquiry-person:hover {
+  border: 2px solid var(--main-theme-3);
 }
 
 /* ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ 
@@ -415,12 +438,13 @@ main #contact-us-section .contact-us-form #message-of-enquiry-person:hover {
 } */
 
 
-main #contact-us-section .contact-us-form .form-submit-btn {
-  height: 35px;
-  width: 70px;
+main #contact-us-section form .form-submit-btn {
+  height: 33px;
+  width: 75px;
   margin-top: 20px;
   margin-bottom: 10px;
-  background-color: aquamarine;
+  background-color: var(--main-theme-pink);
+  color: var(--main-theme-gray);
   font-size: 1rem;
   cursor: pointer;
   border-radius: 10px;
@@ -428,9 +452,11 @@ main #contact-us-section .contact-us-form .form-submit-btn {
   transition: 0.1s;
 }
 
-main #contact-us-section .contact-us-form .form-submit-btn:hover {
+main #contact-us-section form .form-submit-btn:hover {
   transform: scale(1.1);
   transition: 0.2s;
+  color: var(--main-theme-3);
+  /* border: 2px solid var(--main-theme-3); */
 }
 
 
@@ -439,7 +465,7 @@ main #contact-us-section .contact-us-form .form-submit-btn:hover {
 .root footer {
   height: max-content;
   width: 100%;
-  background-color: var(--main-color-theme);
+  background-color: var(--main-theme-pink);
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -466,17 +492,30 @@ footer .footer-nav  ul.footer-nav-menu {
 
 .footer-nav ul.footer-nav-menu li.footer-nav-menu-option {
   margin-top: 7px;
-  filter: var(--gray-color);
+  color: var(--main-theme-gray);
+  /* filter: var(--gray-color); */
+  /* color: gray; */
 }
 
-.footer-nav ul.footer-nav-menu li.footer-nav-menu-option:hover {
-  filter: var(--gray-color-undo);
+.footer-nav ul.footer-nav-menu li.footer-nav-menu-option a.icons-link-social {
+  filter: grayscale(2);
+  /* filter: var(--gray-color-undo); */
+}
+
+.footer-nav ul.footer-nav-menu li.footer-nav-menu-option a.icons-link-social:hover {
+  filter: grayscale(0);
   transition: 0.2s;
 }
 
+/* .footer-nav ul.footer-nav-menu li.footer-nav-menu-option:hover {
+  filter: var(--gray-color-undo);
+  transition: 0.2s;
+} */
+
 .footer-nav ul.footer-nav-menu li.footer-nav-menu-option a.footer-nav-detail-links {
   text-decoration: none;
-  filter: var(--gray-color);
+  color: var(--main-theme-gray);
+  /* filter: var(--gray-color); */
 }
 
 .footer-nav ul.footer-nav-menu li.footer-nav-menu-option a.footer-nav-detail-links:hover {
@@ -486,7 +525,7 @@ footer .footer-nav  ul.footer-nav-menu {
 footer span.footer-span-copyright {
   margin-top: 10px;
   margin-bottom: 20px;
-  filter: var(--gray-color);
+  color: var(--main-theme-gray);
   text-align: center;
 }
 
@@ -533,11 +572,11 @@ footer span.footer-span-copyright {
     font-size: 2rem;
   }
 
-  /* main #contact-us-section .contact-us-form {
+  /* main #contact-us-section form {
     width: 80%;
   } */
 
-  main #contact-us-section .contact-us-form #name-of-enquiry-person , main #contact-us-section .contact-us-form #number-of-enquiry-person , main #contact-us-section .contact-us-form #email-id-of-enquiry-person , main #contact-us-section .contact-us-form #message-of-enquiry-person {
+  main #contact-us-section form #name-of-enquiry-person , main #contact-us-section form #number-of-enquiry-person , main #contact-us-section form #email-id-of-enquiry-person , main #contact-us-section form #message-of-enquiry-person {
     width: 60%;
   }
 }
@@ -587,7 +626,7 @@ footer span.footer-span-copyright {
 
   main #about-us-section .about-us-section-div {
     flex-wrap: wrap;
-    width: 100%;
+    width: 90%;
   }
 
   main #about-us-section .about-us-section-div img {
@@ -596,12 +635,12 @@ footer span.footer-span-copyright {
   }
 
   main #about-us-section .about-us-section-div .about-us-details {
-    width: 80%;
+    width: 75%;
     padding: 10px;
   }
 
 
-  main #contact-us-section .contact-us-form {
+  main #contact-us-section form {
     width: 80%;
   }
 }
@@ -645,7 +684,7 @@ footer span.footer-span-copyright {
 
 
 
-  main #contact-us-section .contact-us-form #name-of-enquiry-person , main #contact-us-section .contact-us-form #number-of-enquiry-person , main #contact-us-section .contact-us-form #email-id-of-enquiry-person , main #contact-us-section .contact-us-form #message-of-enquiry-person {
+  main #contact-us-section form #name-of-enquiry-person , main #contact-us-section form #number-of-enquiry-person , main #contact-us-section form #email-id-of-enquiry-person , main #contact-us-section form #message-of-enquiry-person {
     width: 80%;
   }
 
@@ -653,11 +692,14 @@ footer span.footer-span-copyright {
 
   footer .footer-nav {
     flex-direction: column;
+    width: 80%;
+    margin-top: 25px;
+    margin-bottom: 15px;
   }
 
-  footer .footer-nav  {
+  /* footer .footer-nav  {
     width: 80%;
-  }
+  } */
 
 }
 
