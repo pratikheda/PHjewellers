@@ -4,12 +4,14 @@
 
 :root {
   --font-color-input: rgb(139, 175, 230);
-  --border-color-input: rgb(247, 151, 188);
+  --main-color-theme: rgb(243, 170, 170);
   --caret-color-input: rgb(63, 65, 43);
   --border-color-text: rgb(65, 55, 55);
   --border-color-msg: rgb(49, 68, 70);
   --form-bg-color: rgba(197, 196, 196, 0.247);
   --gradient-text-color-1: linear-gradient(153deg, rgba(209,217,62,0.8186624991793592) 0%, rgba(248,104,61,1) 59%, rgba(123,0,255,0.9363095580028886) 100%);
+  --gray-color: grayscale(5);
+  --gray-color-undo: grayscale(0);
 }
 
 body {
@@ -117,7 +119,10 @@ header #home-section .home-section-msg h2 {
   font-size: 3.5rem;
   margin: 0;
   margin-bottom: 30px;
-  color: aquamarine;
+  background: var(--gradient-text-color-1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 header #home-section .home-section-msg span {
@@ -364,16 +369,16 @@ main #contact-us-section .contact-us-form #name-of-enquiry-person , main #contac
 }
 
 main #contact-us-section .contact-us-form #name-of-enquiry-person:focus , main #contact-us-section .contact-us-form #number-of-enquiry-person:focus , main #contact-us-section .contact-us-form #email-id-of-enquiry-person:focus {
-  border-bottom: 2px solid var(--border-color-input);
+  border-bottom: 2px solid var(--main-color-theme);
 }
 
 main #contact-us-section .contact-us-form #name-of-enquiry-person:hover , main #contact-us-section .contact-us-form #number-of-enquiry-person:hover , main #contact-us-section .contact-us-form #email-id-of-enquiry-person:hover {
-  border-bottom: 2px solid var(--border-color-input);
+  border-bottom: 2px solid var(--main-color-theme);
 }
 
 main #contact-us-section .contact-us-form #message-of-enquiry-person {
-  height: 125px;
-  width: 45%;
+  height: 145px;
+  width: 55%;
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 4px;
@@ -389,11 +394,11 @@ main #contact-us-section .contact-us-form #message-of-enquiry-person {
 }
 
 main #contact-us-section .contact-us-form #message-of-enquiry-person:focus {
-  border: 2px solid var(--border-color-input);
+  border: 2px solid var(--main-color-theme);
 }
 
 main #contact-us-section .contact-us-form #message-of-enquiry-person:hover {
-  border: 2px solid var(--border-color-input);
+  border: 2px solid var(--main-color-theme);
 }
 
 /* ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ 
@@ -420,12 +425,12 @@ main #contact-us-section .contact-us-form .form-submit-btn {
   cursor: pointer;
   border-radius: 10px;
   border: 0;
-  transition: 0.5s;
+  transition: 0.1s;
 }
 
 main #contact-us-section .contact-us-form .form-submit-btn:hover {
   transform: scale(1.1);
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 
@@ -434,7 +439,7 @@ main #contact-us-section .contact-us-form .form-submit-btn:hover {
 .root footer {
   height: max-content;
   width: 100%;
-  background-color: rgb(8, 8, 8);
+  background-color: var(--main-color-theme);
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -459,20 +464,29 @@ footer .footer-nav  ul.footer-nav-menu {
   margin: 0;
 }
 
- ul.footer-nav-menu li.footer-nav-menu-option {
+.footer-nav ul.footer-nav-menu li.footer-nav-menu-option {
   margin-top: 7px;
-  color: rgb(202, 226, 226);
+  filter: var(--gray-color);
 }
 
- ul.footer-nav-menu a.footer-nav-menu-links {
+.footer-nav ul.footer-nav-menu li.footer-nav-menu-option:hover {
+  filter: var(--gray-color-undo);
+  transition: 0.2s;
+}
+
+.footer-nav ul.footer-nav-menu li.footer-nav-menu-option a.footer-nav-detail-links {
   text-decoration: none;
-  color: rgb(225, 235, 235);
+  filter: var(--gray-color);
+}
+
+.footer-nav ul.footer-nav-menu li.footer-nav-menu-option a.footer-nav-detail-links:hover {
+  text-decoration: underline;
 }
 
 footer span.footer-span-copyright {
   margin-top: 10px;
   margin-bottom: 20px;
-  color: aliceblue;
+  filter: var(--gray-color);
   text-align: center;
 }
 
