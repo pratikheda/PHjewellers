@@ -214,7 +214,7 @@ main #services-section .services-div-section {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
-  box-shadow: 10px;
+  box-shadow: 1px 1px 30px 8px var(--main-theme-pink);
 }
 
 #services-section .services-div-section .service-div-1 {
@@ -317,7 +317,7 @@ main #about-us-section .about-us-section-div .about-us-details {
   /* margin-left: 5px; */
   margin: 15px 0;
   color: var(--gradient-text-color-2);
-  text-align: center;
+  /* text-align: center; */
 }
 
 #about-us-section .about-us-section-div .about-us-details span {
