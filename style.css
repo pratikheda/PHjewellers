@@ -4,7 +4,7 @@
 
 :root {
   --main-theme-pink: rgb(243, 170, 170);
-  --main-theme-gray: gray;
+  --main-theme-gray: rgb(90 90 90);
   --main-theme-3: rgb(145, 86, 241);
   /* --main-theme-pink: rgb(139, 175, 230); */
   /* --main-theme-gray: rgb(63, 65, 43); */
@@ -12,8 +12,8 @@
   /* --border-color-msg: rgb(49, 68, 70); */
   --form-bg-color: rgba(197, 196, 196, 0.247);
   --gradient-text-color-1: linear-gradient(153deg, rgba(209,217,62,0.8186624991793592) 0%, rgba(248,104,61,1) 59%, rgba(123,0,255,0.9363095580028886) 100%);
-  --gradient-text-color-2: green;
-  --gradient-text-color-3: linear-gradient(0deg, rgba(243,170,170,0.9895308465182948) 55%, rgba(128,128,128,1) 100%);;
+  --gradient-text-color-2: linear-gradient(45deg, rgba(244,238,108,0.9895308465182948) 27%, rgba(98,226,249,1) 83%);
+  --gradient-text-color-3: linear-gradient(0deg, rgba(243,170,170,0.7895308465182948) 55%, rgba(128,128,128,0.5) 100%);;
   /* --gray-color-icon: grayscale(5); */
   /* --gray-color-icon-undo: grayscale(0); */
 }
@@ -35,6 +35,7 @@ html {
 
 .root nav {
   height: 10vh;
+  width: 100%;
   min-height: 60px;
   max-height: 100px;
   display: flex;
@@ -106,6 +107,7 @@ nav .nav-bar ul.nav-bar-menu li.nav-bar-options:hover {
 
 header #home-section {
   height: 100%;
+  width: 100%;
   max-height: fit-content;
   background-image: url(main-header-image-background.jpg);
   background-repeat: no-repeat;
@@ -122,6 +124,9 @@ header #home-section .home-section-msg {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  /* background-color: var(--form-bg-color); */
+  /* border-radius: 10px; */
+  /* backdrop-filter: blur(1px); */
 }
 
 header #home-section .home-section-msg h2 {
@@ -155,11 +160,13 @@ header #home-section .home-section-msg #start-shopping-btn {
   color: var(--main-theme-gray);
   border: 0;
   font-size: 1rem;
+  transition: 0.1s;
 }
 
 header #home-section .home-section-msg #start-shopping-btn:hover {
   transform: scale(1.1);
   color: var(--main-theme-3);
+  transition: 0.2s;
 }
 
 
@@ -214,7 +221,7 @@ main #services-section .services-div-section {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
-  box-shadow: 1px 1px 30px 8px var(--main-theme-pink);
+  box-shadow: 1px 1px 30px 4px var(--main-theme-pink);
 }
 
 #services-section .services-div-section .service-div-1 {
@@ -241,24 +248,27 @@ main #services-section .services-div-section {
   top: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex-end;
   /* background-color: var(--form-bg-color); */
-  background-color: var(--gradient-text-color-3);
+  background: var(--gradient-text-color-3);
   backdrop-filter: blur(10px);
   transition: 0.5s;
   padding: 10px;
 }
 
 #services-section .services-div-section .services-tiles:hover .services-tiles-hover-div {
-  top: 40%;
-  transition: 0.5s;
+  top: 0%;
+  transition: 0.7s;
 }
 
 #services-section .services-div-section .services-tiles .services-tiles-hover-div h2 {
   margin: 20px 0;
   line-height: 30px;
   font-size: 2.5rem;
-  color: var(--gradient-text-color-2);
+  background: var(--gradient-text-color-2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #services-section .services-div-section .services-tiles .services-tiles-hover-div span {
@@ -315,8 +325,13 @@ main #about-us-section .about-us-section-div .about-us-details {
 
 #about-us-section .about-us-section-div .about-us-details h3 {
   /* margin-left: 5px; */
+  display: inline-block;
   margin: 15px 0;
-  color: var(--gradient-text-color-2);
+  font-size: 1.5rem;
+  background: var(--gradient-text-color-2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   /* text-align: center; */
 }
 
@@ -493,16 +508,23 @@ footer .footer-nav  ul.footer-nav-menu {
 .footer-nav ul.footer-nav-menu li.footer-nav-menu-option {
   margin-top: 7px;
   color: var(--main-theme-gray);
+  font-size: 1.1rem;
   /* filter: var(--gray-color); */
   /* color: gray; */
 }
 
-.footer-nav ul.footer-nav-menu li.footer-nav-menu-option a.icons-link-social {
+/* .footer-nav ul.footer-nav-menu li.footer-nav-menu-option a.icons-link-social {
   filter: grayscale(2);
-  /* filter: var(--gray-color-undo); */
+  filter: var(--gray-color-undo);
+} */
+
+.footer-nav ul.footer-nav-menu li.footer-nav-menu-option a.icons-link-social img.icon-social {
+  height: 25px;
+  width: 25px;
+  filter: grayscale(2);
 }
 
-.footer-nav ul.footer-nav-menu li.footer-nav-menu-option a.icons-link-social:hover {
+.footer-nav ul.footer-nav-menu li.footer-nav-menu-option a.icons-link-social img.icon-social:hover {
   filter: grayscale(0);
   transition: 0.2s;
 }
@@ -527,6 +549,7 @@ footer span.footer-span-copyright {
   margin-bottom: 20px;
   color: var(--main-theme-gray);
   text-align: center;
+  font-size: 1.1rem;
 }
 
 
@@ -564,9 +587,9 @@ footer span.footer-span-copyright {
     width: 240px;
   }
 
-  #services-section .services-div-section .services-tiles:hover .services-tiles-hover-div {
+  /* #services-section .services-div-section .services-tiles:hover .services-tiles-hover-div {
     top: 30%;
-  }
+  } */
 
   #services-section .services-div-section .services-tiles .services-tiles-hover-div h2 {
     font-size: 2rem;
