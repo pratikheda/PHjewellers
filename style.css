@@ -218,22 +218,28 @@ main #services-section .services-div-section {
   border-radius: 10px;
   /* transition: 0.5s; */
   /* background: url(main-header-image-background.jpg); */
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* background-repeat: no-repeat; */
+  /* background-size: contain; */
   overflow: hidden;
-  box-shadow: 1px 1px 30px 4px var(--main-theme-pink);
+  /* box-shadow: 1px 1px 30px 4px var(--main-theme-pink); */
 }
 
 #services-section .services-div-section .service-div-1 {
-  background: url(Platinum-Jewellery-Ornament.png);
+  background: url(Silver-Jewellery-Ornament.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #services-section .services-div-section .service-div-2 {
   background: url(Gold-Jewellery-Ornament.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #services-section .services-div-section .service-div-3 {
-  background: url(Silver-Jewellery-Ornament.jpg);
+  background: url(Diamond-Jewellery-Ornament.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #services-section .services-div-section .services-tiles:hover {
@@ -256,15 +262,19 @@ main #services-section .services-div-section {
   padding: 10px;
 }
 
+#services-section .services-div-section .services-tiles:hover {
+  box-shadow: 1px 1px 30px 10px var(--main-theme-pink);
+}
+
 #services-section .services-div-section .services-tiles:hover .services-tiles-hover-div {
   top: 0%;
-  transition: 0.7s;
+  transition: 0.5s;
 }
 
 #services-section .services-div-section .services-tiles .services-tiles-hover-div h2 {
   margin: 20px 0;
-  line-height: 30px;
-  font-size: 2.5rem;
+  line-height: 40px;
+  font-size: 2.4rem;
   background: var(--gradient-text-color-2);
   background-clip: text;
   -webkit-background-clip: text;
@@ -315,6 +325,7 @@ main #about-us-section .about-us-section-div img {
   background-repeat: no-repeat;
   background-size: cover; */
   border-radius: 15px;
+  box-shadow: 1px 1px 30px 4px var(--main-theme-pink);
 }
 
 main #about-us-section .about-us-section-div .about-us-details {
