@@ -403,6 +403,7 @@ main #contact-us-section form span {
 main #contact-us-section form #name-of-enquiry-person , main #contact-us-section form #number-of-enquiry-person , main #contact-us-section form #email-id-of-enquiry-person {
   height: 35px;
   width: 50%;
+  max-width: 600px;
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 4px;
@@ -428,6 +429,7 @@ main #contact-us-section form #name-of-enquiry-person:hover , main #contact-us-s
 main #contact-us-section form #message-of-enquiry-person {
   height: 145px;
   width: 50%;
+  max-width: 600px;
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 4px;
@@ -570,8 +572,20 @@ footer span.footer-span-copyright {
 @media only screen and (max-width: 768px) , screen and (min-height: 924px) {
   .root header {
     height: 35vh;
-    min-height: 250px;
+    min-height: 600px;
     /* min-height: max-content; */
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #services-section .services-div-section .services-tiles {
+    height: 420px;
+    width: 370px;
+  }
+
+  main #about-us-section .about-us-section-div img {
+    width: 300px;
+    height: 350px;
   }
 }
 
@@ -653,6 +667,7 @@ footer span.footer-span-copyright {
 
   #services-section .services-div-section .services-tiles {
     width: 300px;
+    height: 350px;
     margin-bottom: 25px;
   }
 
