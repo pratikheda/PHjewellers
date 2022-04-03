@@ -762,9 +762,37 @@ footer span.footer-span-copyright {
 }
 
 
-
 @media screen and (max-width: 279px) {
   * {
     display: none;
+  }
+}
+
+.root .mobile-nav {
+  display: none;
+}
+
+.root .mobile-nav h4 {
+  color: rgba(41, 53, 63, 0.911);
+  font-size: 2rem;
+  margin: 0 ;
+}
+
+@media screen and (max-width: 768px) {
+  .root .mobile-nav {
+    height: max-content;
+    width: 95%;
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 15px;
+    background-color: rgba(255,255,255,0.4);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    display: block;
+    z-index: 9999;
+    position: absolute;
+    left: -100%;
+    top: 12%;
+    transition: all 1s ease-in-out;
   }
 }
